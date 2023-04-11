@@ -48,13 +48,13 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(movement * speed);    
 
-        if (rb.transform.position.y <= 0.55) {
+        if (rb.transform.position.y <= 0.5) {
             jumpCount = 0;
         }
 
         if (jumpCount != 2) {
 
-            if (Input.GetKeyDown ("c")) {
+            if (Input.GetKeyDown ("space")) {
                     Vector3 jump = new Vector3 (0.0f, 200.0f, 0.0f);
                     rb.AddForce (jump);
                     jumpCount = jumpCount + 1;
